@@ -12,10 +12,10 @@ title3 = input("Введите третий зоголовок заметки: "
 title = [title1, title2, title3]
 
 # Вывод данных
-print("\nВы ввели следующие данные:")
-print("Имя пользователя:", username)
-print("Заголовок заметки:", title)
-print("Описание заметки:", content)
-print("Статус заметки:", status)
-print("Дата создания заметки:", created_date)
-print("Дата истечения заметки:", issue_date)
+print("\nВы ввели следующие данные: ")
+print("Имя пользователя: ", username)
+print("Заголовок заметки: ", title)
+print("Описание заметки: ", content)
+print("Статус заметки: ", status)
+print("Дата создания заметки: ", created_date)
+print("Дата истечения заметки: ", issue_date)

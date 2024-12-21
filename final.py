@@ -17,4 +17,3 @@ for i in range(note["num_titles"]):
 # Выыод
 for key, value in note.items():
     print(f"{key.capitalize()} : {value}")
-

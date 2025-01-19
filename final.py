@@ -51,9 +51,18 @@ for i in range(notes):
         "issue_date" : tmp_is_dt,
     }
 
-    book.append(note)
+    book.append(note) #добавляем в конец списка заметок
 
 # Просмотр заметок:
-print("\nПросмотр заметок: \n")
-for i in book:
-    print(i)
+for index, note in enumerate(book, start = 1):  # index — порядковый номер заметки, note — текущая заметка в book = [{"key1": "value1"}, {"key2": "value2"}], то enumerate(1, {"key1": "value1"}), index = 1, note = {"key1": "value1"}
+    print(f"\nЗаметка {index + 1}:  ") # В note сама заметка (note.items() вернет '['title','заголовок заметки']' этой заметки (key, value))
+    for key, value in note.items(): # попадаем внутрь заметки, выделяем список
+        if isinstance(value, list): # isinstance(объект, тип_данных) проверяет, является ли объект value экземпляром указанного типа
+             print(f"{key.capitalize()}: ")
+             for item in value: #выводим все списки (users, title. content)
+                 print(f" - {item}") #(user_1. user_2)
+        else:  # Если значение не список
+            print(f"{key.capitalize()}: {value}")
+
+
+
